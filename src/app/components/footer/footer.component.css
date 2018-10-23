@@ -1,11 +1,10 @@
-footer {
+:host {
     display: flex;
     background-color: #00802F;
     width: 100%;
-    position: absolute;
     align-items: center;
-    bottom: 0;
     box-shadow: 0em 0.1em 5em 0em rgb(97, 97, 97);
+    flex-shrink: 0;
 }
 
 h1 {
