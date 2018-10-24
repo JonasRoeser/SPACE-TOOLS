@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
+  public chatMessage:string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  public addMessage(): void {
+    alert(this.chatMessage)
+
+    this.chatMessage = ""
+  }
 }

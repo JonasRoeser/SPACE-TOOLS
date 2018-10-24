@@ -1,2 +1,2 @@
-<textarea></textarea>
-<button></button>
+<textarea (keydown.enter)="addMessage()" [(ngModel)]="chatMessage"></textarea>
+<button (click)="addMessage()" [disabled]="!chatMessage">Senden</button>
