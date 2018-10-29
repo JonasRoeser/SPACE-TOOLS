@@ -1,0 +1,46 @@
+:host {
+    width: auto;
+    text-align: center;
+    top: 18em;
+    position: relative;
+}
+
+.inputArea {
+    resize: none;
+    height: 5em;
+    width: 32em;
+    border-radius: 0.25em;
+    outline: none;
+    font-family: montserratLight, sans-serif;
+    vertical-align: bottom;
+}
+
+.inputArea::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.inputArea::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 0.25em;
+    border: 1px solid rgb(169,169,169);
+}
+
+.sendMessageBtn {
+    height: 2em;
+    background-color: #00802F;
+    color: white;
+    border-radius: 0.25em;
+    border: none;
+    font-family: montserratLight, sans-serif;
+    margin-left: 1em;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+}
+
+.sendMessageBtn:disabled {
+    background-color: white;
+    color: #00802F;
+    cursor: default;
+}
