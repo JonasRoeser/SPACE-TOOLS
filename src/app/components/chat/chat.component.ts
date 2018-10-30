@@ -13,10 +13,17 @@ export class ChatComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
   public addMessage(): void {
-    alert(this.chatMessage)
+    this.chatMessage = this.chatMessage.trim()
 
-    this.chatMessage = ""
+    if(this.chatMessage.length !== 0) {
+      alert(this.chatMessage)
+      this.chatMessage = ""
+    }
+
+    else {
+      alert("Gib bitte einen Text ein!")
+    }
   }
 }
