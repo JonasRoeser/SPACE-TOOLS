@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ChatComponent implements OnInit {
 
   public chatMessage:string;
+  public chatFlow:string; 
+  public chatUser:string;
+  public n:number = 0;
+  public i:number = 0;
+
 
   constructor() { }
 
@@ -16,9 +21,13 @@ export class ChatComponent implements OnInit {
   
   public addMessage(): void {
     this.chatMessage = this.chatMessage.trim()
+    this.chatUser = this.chatUser.trim()
 
-    if(this.chatMessage.length !== 0) {
+    if(this.chatMessage.length !== 0 && this.chatUser.length) {
       alert(this.chatMessage)
+      this.n = this.n + 1
+      this.i = 0
+      this.chatFlow = this.chatFlow + this.chatUser + ": " + this.chatMessage + "\n"
       this.chatMessage = ""
     }
 

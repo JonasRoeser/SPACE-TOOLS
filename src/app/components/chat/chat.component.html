@@ -1,3 +1,7 @@
+<input class="userInput" [(ngModel)]="chatUser" placeholder="Dein Benutzername...">
+<div class="outputArea">
+    {{chatFlow}}
+</div>
 <textarea class="inputArea" (keydown.enter)="addMessage();false" [(ngModel)]="chatMessage" placeholder="Dein Text...">
 </textarea>
 <button class="sendMessageBtn" (click)="addMessage()" [disabled]="!chatMessage">

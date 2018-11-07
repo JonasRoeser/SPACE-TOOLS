@@ -1,8 +1,36 @@
 :host {
     width: auto;
     text-align: center;
-    top: 18em;
+    top: 3em;
     position: relative;
+}
+
+.userInput {
+    width: 32em;
+    border-radius: 0.25em;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid #A9A9A9;
+    border-bottom: none;
+    outline: none;
+    font-family: montserratLight, sans-serif;
+    background-color:white;
+    margin: 0;
+    padding: 0;
+    font-size: 90%;
+}
+
+.outputArea {
+    height: 18em;
+    width: 32em;
+    border: 1px solid #A9A9A9;
+    outline: none;
+    font-family: montserratLight, sans-serif;
+    background-color:white;
+    margin: 0;
+    padding: 0;
+    font-size: 90%;
+    white-space: pre-wrap;
 }
 
 .inputArea {
@@ -10,9 +38,16 @@
     height: 5em;
     width: 32em;
     border-radius: 0.25em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
     outline: none;
     font-family: montserratLight, sans-serif;
     vertical-align: bottom;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 90%;
 }
 
 .inputArea::-webkit-scrollbar {
