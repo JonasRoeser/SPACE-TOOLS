@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-chat-bar',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat-bar.component.css']
 })
 export class ChatBarComponent implements OnInit {
+
+  @Output() chatHistory: EventEmitter<string> = new EventEmitter(); // Achtung bei Auswahl der EventEmitter --> sollte der aus Gangular, nicht asu anderer Library sein
 
   public chatMessage:string;
 
@@ -19,7 +21,9 @@ export class ChatBarComponent implements OnInit {
   }
 
   public addMessage2(value: string): void {
-    alert(value);
+    // alert(value);
+
+    this.chatHistory.emit(value);
 
     this.chatMessage = '';
   }
