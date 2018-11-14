@@ -9,14 +9,11 @@ export class AppComponent {
   public title = 'SPACE-TOOLS';
   public chatInput: string;
 
-  constructor() {
-    this.chatInput = '';
-  }
-
   public onChatHistory(value:string):void {
     if(!this.chatInput) {
       this.chatInput = '';
     }
-    this.chatInput += value;
+
+    this.chatInput += value + "\n";
   }
 }
