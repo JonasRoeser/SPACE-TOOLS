@@ -1,5 +1,6 @@
 <app-header></app-header>
 <div class="contentBereich">
+  <app-chat-user></app-chat-user>
   <app-chat-history [history]="chatInput"></app-chat-history>
   <app-chat-bar (chatHistory)="onChatHistory($event)"></app-chat-bar>
 </div>
