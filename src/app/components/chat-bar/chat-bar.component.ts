@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-chat-bar',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatBarComponent implements OnInit {
 
+  @Output() chatHistory: EventEmitter<string> = new EventEmitter();
+
   public chatMessage:string;
 
   constructor() { }
@@ -14,12 +16,13 @@ export class ChatBarComponent implements OnInit {
   ngOnInit() {
   }
   
-  public addMessage(): void {
+  public addMessage(value: string): void {
     this.chatMessage = this.chatMessage.trim()
 
     if(this.chatMessage.length !== 0) {
-      alert(this.chatMessage)
-      this.chatMessage = ""
+      this.chatHistory.emit(value);
+
+      this.chatMessage = '';
     }
 
     else {

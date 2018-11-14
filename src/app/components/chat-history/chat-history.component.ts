@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-chat-history',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat-history.component.css']
 })
 export class ChatHistoryComponent implements OnInit {
+
+  @Input() history: string;
 
   constructor() { }
 
