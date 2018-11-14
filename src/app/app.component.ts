@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title = 'SPACE-TOOLS';
-  public chatInput: string;
+  public chatInputs: string;
 
-  public onChatHistory(value:string):void {
-    if(!this.chatInput) {
-      this.chatInput = '';
+  public addToChatHistory(value:string):void {
+    if(!this.chatInputs) {
+      this.chatInputs = '';
     }
 
-    this.chatInput += value + "\n";
+    this.chatInputs += value + "\n";
   }
 }

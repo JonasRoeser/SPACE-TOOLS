@@ -7,7 +7,7 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 })
 export class ChatBarComponent implements OnInit {
 
-  @Output() chatHistory: EventEmitter<string> = new EventEmitter();
+  @Output() chatCache: EventEmitter<string> = new EventEmitter();
 
   public chatMessage:string;
 
@@ -20,7 +20,7 @@ export class ChatBarComponent implements OnInit {
     this.chatMessage = this.chatMessage.trim()
 
     if(this.chatMessage.length !== 0) {
-      this.chatHistory.emit(value);
+      this.chatCache.emit(value);
 
       this.chatMessage = '';
     }
