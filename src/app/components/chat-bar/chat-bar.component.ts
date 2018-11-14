@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-chat',
-  templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.css']
+  selector: 'app-chat-bar',
+  templateUrl: './chat-bar.component.html',
+  styleUrls: ['./chat-bar.component.css']
 })
-export class ChatComponent implements OnInit {
+export class ChatBarComponent implements OnInit {
 
   public chatMessage:string;
 

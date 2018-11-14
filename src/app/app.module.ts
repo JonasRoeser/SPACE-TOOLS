@@ -5,14 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ChatComponent } from './components/chat/chat.component';
+import { ChatBarComponent } from './components/chat-bar/chat-bar.component';
+import { ChatHistoryComponent } from './components/chat-history/chat-history.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ChatComponent
+    ChatBarComponent,
+    ChatHistoryComponent
   ],
   imports: [
     BrowserModule,
