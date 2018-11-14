@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChatHistoryComponent implements OnInit {
 
-  @Input() history: string;
+  @Input() chatHistory: string;
 
   constructor() { }
 
