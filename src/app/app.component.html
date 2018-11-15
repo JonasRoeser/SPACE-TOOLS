@@ -1,7 +1,8 @@
 <app-header></app-header>
 <div class="contentBereich">
-  <app-chat-user></app-chat-user>
+  <app-chat-user (userCache)="addUsername($event)"></app-chat-user>
   <app-chat-history [chatHistory]="chatInputs"></app-chat-history>
   <app-chat-bar (chatCache)="addToChatHistory($event)"></app-chat-bar>
+  {{Username}}
 </div>
 <app-footer></app-footer>
