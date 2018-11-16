@@ -1,7 +1,7 @@
 :host {
     width: auto;
     text-align: center;
-    top: 18em;
+    top: 5.5em;
     position: relative;
 }
 
@@ -13,6 +13,7 @@
     outline: none;
     font-family: montserratLight, sans-serif;
     vertical-align: bottom;
+    padding: 0.5em;
 }
 
 .inputArea::-webkit-scrollbar {
@@ -20,7 +21,7 @@
 }
 
 .inputArea::-webkit-scrollbar-thumb {
-    background: white;
+    background: rgb(169,169,169);
     border-radius: 0.25em;
     border: 1px solid rgb(169,169,169);
 }
