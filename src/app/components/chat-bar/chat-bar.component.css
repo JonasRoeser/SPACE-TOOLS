@@ -1,13 +1,13 @@
 :host {
     width: auto;
     text-align: center;
-    top: 5.5em;
+    top: 4em;
     position: relative;
 }
 
 .inputArea {
     resize: none;
-    height: 5em;
+    height: 3em;
     width: 32em;
     border-radius: 0.25em;
     outline: none;
