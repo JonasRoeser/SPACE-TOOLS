@@ -22,7 +22,7 @@ export class ChatBarComponent implements OnInit {
 
   public addMessage2(value: string): void {
     // alert(value);
-
+    value += Person.Nickname;
     this.chatHistory.emit(value);
 
     this.chatMessage = '';
