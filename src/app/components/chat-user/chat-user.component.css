@@ -15,4 +15,25 @@ input {
     vertical-align: bottom;
     padding: 0.5em;
     border: 1px solid rgb(169,169,169);
+    color: rgb(94, 94, 94);
+}
+
+.outputUserBtn {
+    height: 2em;
+    background-color: #00802F;
+    color: white;
+    border-radius: 0.25em;
+    border: none;
+    font-family: montserratLight, sans-serif;
+    margin-left: 1em;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+}
+
+.outputUserBtn:disabled {
+    background-color: white;
+    color: #00802F;
+    cursor: default;
 }
