@@ -53,7 +53,7 @@ option {
 }
 
 .outputUserBtn:disabled {
-    background-color: white;
+    background-color: transparent;
     color: #00802F;
     cursor: default;
 }
