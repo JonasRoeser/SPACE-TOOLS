@@ -13,8 +13,4 @@ export class ChatHistoryComponent implements OnInit {
 
   ngOnInit() {
   }
-  
-  public sth(){
-    alert(this.chatHistory);
-  }
 }

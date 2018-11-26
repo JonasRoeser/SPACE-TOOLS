@@ -1,2 +1,2 @@
-<input [(ngModel)]="chatUsername" placeholder="Dein Benutzername...">
-<button class="outputUserBtn" (click)="outputUsername(chatUsername)" [disabled]="!chatUsername">Speichern</button>
+<input [(ngModel)]="chatUsername" placeholder="Dein Benutzername..." (keydown.enter)="outputUsername(chatUsername);false">
+<button class="outputUserBtn" (click)="outputUsername(chatUsername)" [disabled]="!chatUsername || chatUsername == changeTest">Speichern</button>

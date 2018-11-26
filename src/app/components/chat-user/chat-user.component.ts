@@ -10,13 +10,14 @@ import { Person } from 'src/app/shared/Models/person';
 export class ChatUserComponent implements OnInit {
 
   public chatUsername:string;
+  public changeTest:string;
 
   constructor() { }
 
   ngOnInit() {
   }
   
-  public outputUsername(name: string): void {
+  public outputUsername(value: string): void {
     this.chatUsername = this.chatUsername.trim()
 
     var format = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
@@ -25,7 +26,8 @@ export class ChatUserComponent implements OnInit {
     }
     
     else{
-      Person.Nickname = name;
+      Person.Nickname = value;
+      this.changeTest = value;
     }
   }
 }

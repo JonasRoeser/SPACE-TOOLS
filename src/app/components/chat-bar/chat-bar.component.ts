@@ -24,7 +24,7 @@ export class ChatBarComponent implements OnInit {
 
     if(this.chatMessage.length !== 0) {
       if (Person.Nickname) {
-        value = `${Person.Nickname}\n${value}`;
+        value = `${Person.Nickname}: ${value}`;
   
         this.chatCache.emit(value);
         this.chatMessage = '';

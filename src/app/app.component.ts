@@ -13,12 +13,8 @@ export class AppComponent {
     if(!this.chatInputs) {
       this.chatInputs = '';
     }
+    const dateTime: Date = new Date();
 
-    else {
-      alert(value);
-      const dateTime: Date = new Date();
-
-      this.chatInputs += `${dateTime.toLocaleString()}\n${value}\n`;
-    }
+    this.chatInputs += `${dateTime.toLocaleString()}\n${value}\n`;
   }
 }
