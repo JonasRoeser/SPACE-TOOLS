@@ -8,4 +8,14 @@ export class Person {
     public static set Nickname(value: string) {
         this._nickname = value;
     }
+
+    private static _color: string;
+
+    public static get Color(): string {
+        return this._color;
+    }
+
+    public static set Color(value: string) {
+        this._color = value;
+    }
 }

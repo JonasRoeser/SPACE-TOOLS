@@ -1,7 +1,6 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 import { Person } from 'src/app/shared/Models/person';
-import { ALLOW_MULTIPLE_PLATFORMS } from '@angular/core/src/application_ref';
 
 @Component({
   selector: 'app-chat-bar',
@@ -24,7 +23,7 @@ export class ChatBarComponent implements OnInit {
 
     if(this.chatMessage.length !== 0) {
       if (Person.Nickname) {
-        value = `${Person.Nickname}: ${value}`;
+        value = `<b><font color="${Person.Color}">${Person.Nickname}:</font></b> ${value}`;
   
         this.chatCache.emit(value);
         this.chatMessage = '';

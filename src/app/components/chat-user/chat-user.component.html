@@ -1,2 +1,9 @@
-<input [(ngModel)]="chatUsername" placeholder="Dein Benutzername..." (keydown.enter)="outputUsername(chatUsername);false">
-<button class="outputUserBtn" (click)="outputUsername(chatUsername)" [disabled]="!chatUsername || chatUsername == changeTest">Speichern</button>
+<input [(ngModel)]="chatUsername" placeholder="Dein Benutzername..." (keydown.enter)="outputUsername(chatUsername, chatUsercolor);false">
+<select [(ngModel)]="chatUsercolor">
+    <option value="undefined" disabled selected hidden>Deine Farbe...</option>
+    <option value="red">Rot</option>
+    <option value="green">Grün</option>
+    <option value="yellow">Gelb</option>
+    <option value="black">Schwarz</option>
+</select>
+<button class="outputUserBtn" (click)="outputUsername(chatUsername, chatUsercolor)" [disabled]="!chatUsername || !chatUsercolor || chatUsername == changeTestName && chatUsercolor == changeTestColor">Speichern</button>

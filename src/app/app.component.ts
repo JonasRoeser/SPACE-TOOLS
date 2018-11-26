@@ -15,6 +15,6 @@ export class AppComponent {
     }
     const dateTime: Date = new Date();
 
-    this.chatInputs += `${dateTime.toLocaleString()}\n${value}\n`;
+    this.chatInputs += `<i><font size="0.5em">${dateTime.toLocaleString()}</font></i><br>${value}<br><br>`;
   }
 }
