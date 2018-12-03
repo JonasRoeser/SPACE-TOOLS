@@ -7,11 +7,11 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 })
 export class ChatBarComponent implements OnInit {
 
-  @Output() chatHistory: EventEmitter<string> = new EventEmitter(); // Achtung bei Auswahl der EventEmitter --> sollte der aus Gangular, nicht asu anderer Library sein
+  //@Output() chatHistory: EventEmitter<string> = new EventEmitter(); // Achtung bei Auswahl der EventEmitter --> sollte der aus Gangular, nicht asu anderer Library sein
 
   public chatMessage:string;
 
-  constructor() { }
+  constructor(private chatService: chatService) { }
 
   ngOnInit() {
   }
@@ -21,10 +21,28 @@ export class ChatBarComponent implements OnInit {
   }
 
   public addMessage2(value: string): void {
-    // alert(value);
-    value += Person.Nickname;
-    this.chatHistory.emit(value);
+    if(Person:Nickname) {
+      value = `${Person.nickname}<br>${value}`;
+      this.chatMessage='';
 
-    this.chatMessage = '';
+      const messageToSend: ChatMessage = new ChatMessage();
+      messageToSend.message = value
+      messageToSend.nickname = Person.Nickname
+
+      this.chatService.addToHistory(messageToSend)
+      // note: private variable von chatService hier nicht mehr accessible
+      .subscribe(response => {
+        // response geht mit fat arrow function über in nachricht löschen
+        this.chatMessage = '';
+      },
+      error => console.log(<any>error)),
+      () => { });
+      // note: um evtl. errors mitzubekommen
+    }
+    // alert(value);
+    //value += Person.Nickname;
+    //this.chatHistory.emit(value);
+
+    //this.chatMessage = '';
   }
 }

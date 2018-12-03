@@ -9,9 +9,14 @@ export class ChatHistoryComponent implements OnInit {
 
   @Input() history: string;public
 
-  constructor() { }
+  constructor(private chatService: ChatService) { }
 
   ngOnInit() {
+    // hier wird jede 2s getHistory aufgerufen
   }
 
+  private getHistory() {
+    // hier können wir alles wieder zusammenfügen
+    // wir können das am server generierte datum hier abrufen
+  }
 }
