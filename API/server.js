@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-var port = 3000;
+var port = 4201;
 
 app.set('port', port);
 
@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 
 var chatHistory = [];
 var nicknames = [];
+var colors = [];
 
 // Add headers
 app.use(function (req, res, next) {
@@ -63,6 +64,26 @@ app.post('/nicknames', function (req, res, next) {
     nicknames.push({ username: req.body.username, id: nicknames.length + 1 });
 
     res.json({ username: req.body.username });
+});
+
+// colors
+app.get('/colors', function (req, res, next) {
+    res.send(colors);
+});
+
+app.get('/colors/:id', function (req, res, next) {
+    for (var i = 0; colors.length > 0; i++) {
+        if (colors[i] && colors[i].id === req.params.id) {
+            res.send({ usercolor: colors[i].usercolor, id: colors[i].id });
+        }
+    }
+});
+
+app.post('/colors', function (req, res, next) {
+    console.log(req.body);
+    colors.push({ usercolor: req.body.usercolor, id: colors.length + 1 });
+
+    res.json({ usercolor: req.body.usercolor });
 });
 
 
