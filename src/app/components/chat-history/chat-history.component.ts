@@ -10,7 +10,7 @@ export class ChatHistoryComponent implements OnInit {
   @Input() chatHistory: string;
 
   constructor() { }
-
+  
   ngOnInit() {
   }
 }
