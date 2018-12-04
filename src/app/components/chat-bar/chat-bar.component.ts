@@ -1,32 +1,38 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component } from '@angular/core';
 
 import { Person } from 'src/app/shared/Models/person';
+
+import { ChatService } from 'src/app/shared/services/chat.service';
+import { ChatMessage } from 'src/app/shared/Models/chat-message';
 
 @Component({
   selector: 'app-chat-bar',
   templateUrl: './chat-bar.component.html',
   styleUrls: ['./chat-bar.component.css']
 })
-export class ChatBarComponent implements OnInit {
+export class ChatBarComponent {
+  public chatMessage: string;
 
-  @Output() chatCache: EventEmitter<string> = new EventEmitter();
-
-  public chatMessage:string;
-
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private chatService: ChatService) {
   }
-  
+
   public addMessage(value: string): void {
     this.chatMessage = this.chatMessage.trim()
 
     if(this.chatMessage.length !== 0) {
       if (Person.Nickname) {
-        value = `<b><font color="${Person.Color}">${Person.Nickname}:</font></b> ${value}`;
-  
-        this.chatCache.emit(value);
-        this.chatMessage = '';
+        const messageToSend: ChatMessage = new ChatMessage();
+        messageToSend.message = value;
+        messageToSend.nickname = Person.Nickname;
+        messageToSend.color = Person.Color;
+
+        this.chatService.addToHistory(messageToSend)
+          .subscribe(response => {
+            this.chatMessage = '';
+          },
+            (error: any) => {
+              console.log(error);
+            });
       }
       
       else {

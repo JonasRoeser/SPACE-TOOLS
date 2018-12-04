@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-var port = 4201;
+var port = 4201; // this needs to be changed to process.env.PORT when deploying
 
 app.set('port', port);
 

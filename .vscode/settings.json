@@ -1,0 +1,7 @@
+{
+    "appService.deploySubpath": "dist\\SPACE-TOOLS",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "None"
+}
