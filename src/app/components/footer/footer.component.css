@@ -18,3 +18,7 @@ h1 {
     color: #ffffff;
     font-family: montserratLight, sans-serif;
 }
+
+@media only screen and (max-width: 680px) {
+    
+}

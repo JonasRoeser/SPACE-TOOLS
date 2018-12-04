@@ -47,3 +47,15 @@
     color: #00802F;
     cursor: default;
 }
+
+@media only screen and (max-width: 680px) {
+    .inputArea {
+        height: 3em;
+        width: 12em;
+        padding: 0.5em;
+    }
+
+    .sendMessageBtn {
+        position: relative;
+    }
+}

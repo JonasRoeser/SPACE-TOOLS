@@ -31,3 +31,12 @@
     border-radius: 0.25em;
     border: 1px solid rgb(169,169,169);
 }
+
+@media only screen and (max-width: 680px) {
+    .historyFeld {
+        height: 15em;
+        width: 17em;
+        padding: 0.5em;
+        font-size: 0.833em;
+    }
+}

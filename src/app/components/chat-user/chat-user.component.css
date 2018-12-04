@@ -57,3 +57,46 @@ option {
     color: #00802F;
     cursor: default;
 }
+
+@media only screen and (max-width: 680px) {
+    :host {
+        margin-top: 1.5em;
+    }
+    input {
+        height: 1em;
+        width: 5em;
+        border-radius: 0.25em;
+        outline: 2em;
+        font-family: montserratLight, sans-serif;
+        vertical-align: bottom;
+        padding: 0.5em;
+        border: 1px solid rgb(169,169,169);
+        color: rgb(94, 94, 94);
+    }
+    
+    select {
+        margin-left: 0.5em;
+        font-size: 0.833em;
+        height: 2.15em;
+        width: 4em;
+        border-radius: 0.25em;
+        outline: 2em;
+        padding: 0.5em;
+        padding-top: 0.4em;
+        padding-left: 0.3em;
+        padding-right: 0;
+    }
+    .outputUserBtn {
+        height: 2.15em;
+        background-color: #00802F;
+        color: white;
+        border-radius: 0.25em;
+        border: none;
+        font-family: montserratLight, sans-serif;
+        margin-left: 0.5em;
+        outline: none;
+        cursor: pointer;
+        bottom: 0;
+    }
+    
+}
