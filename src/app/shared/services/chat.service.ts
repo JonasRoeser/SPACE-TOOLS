@@ -9,7 +9,7 @@ export class ChatService {
     private actionUrl: string;
 
     constructor(private http: HttpClient) {
-        this.actionUrl = 'https://apihsg.azurewebsites.net/history';
+        this.actionUrl = 'http://apihsg.azurewebsites.net/history';
     }
 
     public addToHistory(message: ChatMessage): Observable<ChatMessage> {
