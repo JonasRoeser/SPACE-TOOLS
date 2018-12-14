@@ -8,8 +8,11 @@
 .historyFeld {
     text-align: left;
     resize: none;
-    height: 17em;
-    width: 32em;
+    min-height: 17em;
+    height: 50vh;
+    position: relative;
+    min-width: 32em;
+    width: 50vw;
     background-color: white;
     border-radius: 0.25em;
     border: 1px solid rgb(169,169,169);

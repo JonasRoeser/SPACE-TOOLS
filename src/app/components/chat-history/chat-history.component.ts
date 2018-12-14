@@ -28,7 +28,7 @@ export class ChatHistoryComponent implements OnInit {
 
           this.history += `<i><font size="0.5em">${date.toLocaleString()}</font></i><br>
           <b><font color=${history.color}>${history.nickname}:</font></b>
-          ${history.message}${history.date}<br><br>`;
+          ${history.message}<br><br>`;
         }
       });
   }
