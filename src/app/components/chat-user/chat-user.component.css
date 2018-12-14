@@ -6,9 +6,10 @@
 }
 
 input {
+    margin-left: 0.5em;
     resize: none;
-    height: 1em;
-    width: 16em;
+    height: 0.9em;
+    width: 20em;
     border-radius: 0.25em;
     outline: 2em;
     font-family: montserratLight, sans-serif;
@@ -19,16 +20,14 @@ input {
 }
 
 select {
-    margin-left: 0.5em;
     font-size: 0.833em;
-    height: 2.15em;
-    width: 9em;
+    height: 2em;
+    width: 11.5em;
     border-radius: 0.25em;
     outline: 2em;
     font-family: montserratLight, sans-serif;
     vertical-align: bottom;
-    padding: 0.5em;
-    padding-top: 0.4em;
+    padding-top: 0.1em;
     padding-left: 0.3em;
     padding-right: 0;
     border: 1px solid rgb(169,169,169);
@@ -40,15 +39,16 @@ option {
 }
 
 .outputUserBtn {
-    height: 2.15em;
+    height: 2em;
     background-color: #00802F;
     color: white;
     border-radius: 0.25em;
     border: none;
     font-family: montserratLight, sans-serif;
-    margin-left: 0.5em;
+    margin-left: 1em;
     outline: none;
     cursor: pointer;
+    position: absolute;
     bottom: 0;
 }
 

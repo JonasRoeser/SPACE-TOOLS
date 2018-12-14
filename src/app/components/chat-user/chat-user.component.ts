@@ -18,7 +18,7 @@ export class ChatUserComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
   public outputUsername(name: string, value: string): void {
     this.chatUsername = this.chatUsername.trim()
 
