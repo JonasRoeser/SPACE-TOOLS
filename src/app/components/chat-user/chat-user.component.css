@@ -8,7 +8,6 @@
 input {
     resize: none;
     height: 0.9em;
-    /*width: 12em;*/
     border-radius: 0.25em;
     outline: 2em;
     font-family: montserratLight, sans-serif;
@@ -34,14 +33,13 @@ select {
     border: 1px solid rgb(169,169,169);
     color: rgb(94, 94, 94);
     margin-right: 0.5em;
-
 }
 
 option {
     color: rgb(94, 94, 94);
 }
 
-.outputUserBtn {
+.outputUserBtn1 {
     height: 2em;
     background-color: #00802F;
     color: white;
@@ -55,20 +53,25 @@ option {
     bottom: 0;
 }
 
-.outputUserBtn:disabled {
+.outputUserBtn1:disabled {
     background-color: transparent;
     color: #00802F;
     cursor: default;
     border: 1px solid #00802F;
 }
 
+.outputUserBtn2{
+    display: none;
+}
+
 @media only screen and (max-width: 680px) {
     :host {
         margin-top: 1.5em;
     }
+
     input {
-        height: 1em;
-        width: 5em;
+        resize: none;
+        height: 0.9em;
         border-radius: 0.25em;
         outline: 2em;
         font-family: montserratLight, sans-serif;
@@ -76,31 +79,57 @@ option {
         padding: 0.5em;
         border: 1px solid rgb(169,169,169);
         color: rgb(94, 94, 94);
+        text-align: center;
+        width: 8em;
     }
     
     select {
-        margin-left: 0.5em;
         font-size: 0.833em;
-        height: 2.15em;
-        width: 4em;
+        height: 2em;
+        width: 5.5em;
         border-radius: 0.25em;
+        position: relative;
         outline: 2em;
-        padding: 0.5em;
-        padding-top: 0.4em;
+        font-family: montserratLight, sans-serif;
+        vertical-align: bottom;
+        padding-top: 0.1em;
         padding-left: 0.3em;
         padding-right: 0;
+        border: 1px solid rgb(169,169,169);
+        color: rgb(94, 94, 94);
+        margin-right: 0.5em;
     }
-    .outputUserBtn {
-        height: 2.15em;
+
+    .outputUserBtn1 {
+        display: none;
+    }
+
+    .outputUserBtn2 {
+        height: 0.8em;
         background-color: #00802F;
         color: white;
         border-radius: 0.25em;
         border: none;
         font-family: montserratLight, sans-serif;
-        margin-left: 0.5em;
+        font-weight: bold;
+        font-size: 2em;
+        margin-left: 0.25em;
+        line-height: 0em;
+        padding-bottom: 0.2em;
+        padding-left: 0.1em;
+        padding-right: 0.1em;
         outline: none;
         cursor: pointer;
+        position: relative;
         bottom: 0;
+        display: inline-block;
+    }
+    
+    .outputUserBtn2:disabled {
+        background-color: transparent;
+        color: #00802F;
+        cursor: default;
+        border: 1px solid #00802F;
     }
     
 }

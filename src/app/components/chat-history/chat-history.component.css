@@ -37,8 +37,10 @@
 
 @media only screen and (max-width: 680px) {
     .historyFeld {
-        height: 15em;
-        width: 17em;
+        min-height: 13em;
+        height: 50vh;
+        min-width: 17em;
+        width: 65vw;
         padding: 0.5em;
         font-size: 0.833em;
     }

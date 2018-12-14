@@ -8,5 +8,10 @@
     <option value="#9A2EFE" style="background:#9A2EFE"></option>
     <option value="#0101DF" style="background:#0101DF"></option>
 </select>
-<input [(ngModel)]="chatUsername" placeholder="Dein Benutzername..." (keydown.enter)="outputUsername(chatUsername, chatUsercolor);false">
-<button class="outputUserBtn" (click)="outputUsername(chatUsername, chatUsercolor)" [disabled]="!chatUsername || !chatUsercolor || chatUsername == changeTestName && chatUsercolor == changeTestColor">Speichern</button>
+<input [(ngModel)]="chatUsername" placeholder="Benutzername..." (keydown.enter)="outputUsername(chatUsername, chatUsercolor);false">
+<button class="outputUserBtn1" (click)="outputUsername(chatUsername, chatUsercolor)" [disabled]="!chatUsername || !chatUsercolor || chatUsername == changeTestName && chatUsercolor == changeTestColor">
+    Speichern
+</button>
+<button class="outputUserBtn2" (click)="outputUsername(chatUsername, chatUsercolor)" [disabled]="!chatUsername || !chatUsercolor || chatUsername == changeTestName && chatUsercolor == changeTestColor">
+    &#8594;
+</button>
