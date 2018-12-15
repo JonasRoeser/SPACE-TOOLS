@@ -8,7 +8,7 @@
     <option value="#9A2EFE" style="background:#9A2EFE; color:#9A2EFE">Lila</option>
     <option value="#0101DF" style="background:#0101DF; color:#0101DF">Dunkelblau</option>
 </select>
-<input class="inputArea" [(ngModel)]="chatUsername" placeholder="Benutzername..." (keydown.enter)="outputUsername(chatUsername, chatUsercolor);false">
+<input id="inputr" class="inputArea" [(ngModel)]="chatUsername" placeholder="Benutzername..." (keydown.enter)="outputUsername(chatUsername, chatUsercolor);false">
 <button class="outputUserBtn1" (click)="outputUsername(chatUsername, chatUsercolor)" [disabled]="!chatUsername || !chatUsercolor || chatUsername == changeTestName && chatUsercolor == changeTestColor">
     Speichern
 </button>
