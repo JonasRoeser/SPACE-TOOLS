@@ -22,7 +22,7 @@ export class ChatBarComponent {
     if(this.chatMessage.length !== 0) {
       if (Person.Nickname) {
         const messageToSend: ChatMessage = new ChatMessage();
-        messageToSend.message = value;
+        messageToSend.message = value.replace(":)", "	&#128578;").replace(":D", "&#128515;").replace(";)", "&#128521;").replace(":(", "&#128577;").replace(";P", "	&#128540;").replace(";*", "&#128536;").replace("xD", "&#128518;").replace(":P", "&#128539;").replace("-.-", "&#128529;").replace(":O", "&#128558;");
         messageToSend.nickname = Person.Nickname;
         messageToSend.color = Person.Color;
 
