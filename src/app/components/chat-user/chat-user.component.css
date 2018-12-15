@@ -78,22 +78,23 @@ option {
 
 @media only screen and (max-width: 680px) {
     :host {
-        margin-top: 1.5em;
+        margin-top: 1em;
     }
 
     select {
         -moz-appearance: none;
         -webkit-appearance: none;
         appearance: none;
-        font-size: 0.85em;
-        right: 9.25em;
+        font-size: 1em;
+        right: 9.35em;
         height: 2em;
-        width: 2.1em;
+        width: 2em;
         border-radius: 0.25em;
         position: absolute;
-        outline: 2em;
+        display: inline-block;
+        outline: none;
         font-family: montserratLight, sans-serif;
-        vertical-align: bottom;
+        bottom: 0;
         padding-left: 0.4em;
         border: 1px solid rgb(169,169,169);
         color: rgb(94, 94, 94);
@@ -102,9 +103,9 @@ option {
 
     input {
         resize: none;
-        height: 0.9em;
+        height: 1.7em;
+        font-size: 1em;
         border-radius: 0.25em;
-        outline: 2em;
         font-family: montserratLight, sans-serif;
         vertical-align: bottom;
         padding: 0.5em;
@@ -119,7 +120,7 @@ option {
     }
 
     .outputUserBtn2 {
-        height: 1.7em;
+        height: 2em;
         background-color: #00802F;
         color: white;
         border-radius: 0.25em;
@@ -127,7 +128,7 @@ option {
         font-family: montserratLight, sans-serif;
         font-weight: bold;
         font-size: 1em;
-        width: 1.7em;
+        width: 2em;
         margin-left: 0.25em;
         padding: 0;
         padding-bottom: 0.15;
@@ -145,4 +146,14 @@ option {
         border: 1px solid #00802F;
     }
     
+}
+
+@media only screen and (min-width: 680px) {
+    #startOption {
+        content: "j";
+    }
+
+    option {
+        content: none;
+    }
 }
