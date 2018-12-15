@@ -7,8 +7,11 @@
 }
 
 .inputArea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     resize: none;
-    height: 5em;
+    height: 4.5em;
     min-width: 32em;
     width: 50vw;
     border-radius: 0.25em;
@@ -17,6 +20,8 @@
     vertical-align: bottom;
     padding: 0.5em;
     color: rgb(94, 94, 94);
+    border: 1px solid rgb(169,169,169);
+    box-shadow: inset 0px 0px 0px 0px red;
 }
 
 .inputArea::-webkit-scrollbar {
@@ -71,19 +76,18 @@
     }
 
     .sendMessageBtn2 {
-        height: 0.8em;
+        height: 1.7em;
         background-color: #00802F;
         color: white;
         border-radius: 0.25em;
         border: none;
         font-family: montserratLight, sans-serif;
         font-weight: bold;
-        font-size: 2em;
+        font-size: 1em;
         margin-left: 0.25em;
-        line-height: 0em;
-        padding-bottom: 0.2em;
-        padding-left: 0.1em;
-        padding-right: 0.1em;
+        width: 1.7em;
+        padding: 0;
+        padding-bottom: 0.15em;
         outline: none;
         cursor: pointer;
         position: absolute;
