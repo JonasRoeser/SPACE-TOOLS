@@ -8,7 +8,7 @@
 }
 
 h1 {
-    display: block;
+    display: inline-block;
     width: 100%;
     margin-top: 1.15em;
     margin-bottom: 1.15em;
@@ -17,6 +17,12 @@ h1 {
     font-weight: normal;
     color: #ffffff;
     font-family: montserratLight, sans-serif;
+}
+
+.logo {
+    height: 1.5em;
+    position: absolute;
+    margin-left: 0.5em;
 }
 
 @media only screen and (max-width: 680px) {
