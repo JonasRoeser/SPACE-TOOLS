@@ -8,7 +8,7 @@
 }
 
 h1 {
-    display: inline-block;
+    display: block;
     width: 100%;
     margin-top: 1.15em;
     margin-bottom: 1.15em;
@@ -23,6 +23,19 @@ h1 {
     height: 1.5em;
     position: absolute;
     margin-left: 0.5em;
+}
+
+.attribution {
+    display: inline;
+    margin: 0;
+    text-align: right;
+    font-weight: normal;
+    color: #ffffff;
+    font-family: montserratLight, sans-serif;
+    position: absolute;
+    font-size: 0.5em;
+    white-space: nowrap;
+    right: 0.5em;
 }
 
 @media only screen and (max-width: 680px) {
